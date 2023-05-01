@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boarding pass</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Boarding pass</h1>
+
+      <div id="ticket">
+        <div id="flight-info">
+          <div class="container">
+            <div class="flight-number">
+              <h2 class="title">Voo</h2>
+              <span class="info">$95</span>
+            </div>
+
+            <div class="flight-date">
+              <h2 class="title">Data</h2>
+              <span class="info">23/05/2023</span>
+            </div>
+          </div>
+
+          <div class="destination">
+            <div>
+              <h2 class="title">Sao Paulo, Brazil</h2>
+              <span class="airport-name">GRU</span>
+              <span class="time">17:00</span>
+            </div>
+            <div>
+              <img src="./assets/airplane.svg" alt="Ícone de um avião" />
+            </div>
+            <div>
+              <h2 class="title">San Francisco, EUA</h2>
+              <span class="airport-name">SFO</span>
+              <span class="time">
+                04:48
+                <span>+1</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div id="passenger-info">
+          <div class="container">
+            <div>
+              <h2 class="title">Passenger</h2>
+              <span class="info">Renato Garcia</span>
+            </div>
+            <div>
+              <h2 class="title">Seat</h2>
+              <span class="info">27A</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="boarding-info">
+          <div class="container">
+            <div class="boarding-info">
+              <div>
+                <h2 class="title">Boarding</h2>
+                <span class="boarding-time">16:15</span>
+              </div>
+              <div>
+                <h2 class="title">Terminal</h2>
+                <span class="info">2</span>
+              </div>
+              <div>
+                <h2 class="title">Gate</h2>
+                <span class="info">15</span>
+              </div>
+            </div>
+
+            <div class="qr-code">
+              <img src="./assets/qr-code.svg" alt="QR Code" />
+              <p class="title">Boarding group: 3</p>
+            </div>
+          </div>
+
+          <p class="warning">
+            <span>Attention:</span>
+            The gate closes 16:45
+          </p>
+        </div>
+      </div>
+
+      <div id="additional-info">
+        If you have any problems, contact your airline's service desk.
+      </div>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('#ticket'), {
+        max: 20,
+        speed: 400
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --bg-color: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%);
+    --title-color: #000000a3;
+    --info-color: #000000E0;
+    --flight-time-color: #000000CC;
+    --bg-boarding-time-color: #633BBC;
+
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Rubik', sans-serif;
+    background: var(--bg-color) no-repeat center;
+
+    display: grid;
+    place-items: center;
+    letter-spacing: -0.02em;
+}
+
+#app {
+    max-width: 32.7rem;
+}
+
+#ticket {
+    background: url(./assets/bg-ticket.svg) no-repeat center 40%;
+    padding: 24px 0;
+    min-height: 54.4rem;
+}
+
+#flight-info,
+#boarding-info {
+    padding-inline: 32px;
+}
+
+#flight-info {
+    padding-bottom: 24px;
+}
+
+#flight-info .container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+#flight-info .destination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flight-info .time{
+    display: block;
+}
+
+#flight-info .time span {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 12px;
+    vertical-align: text-top;
+}
+
+#passenger-info {
+    border-top: 1px dashed #00000052;
+    border-bottom: 1px dashed #00000052;
+
+    padding: 24px 0;
+    margin-inline: 12px;
+}
+
+#passenger-info .container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: calc(32px - 12px);
+}
+
+#boarding-info {
+    padding-top: 24px;
+}
+
+#boarding-info .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#boarding-info .container .boarding-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 13.5px;
+}
+
+#boarding-info .warning {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#boarding-info .warning span {
+    font-weight: 500;
+}
+
+#additional-info {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 24px;
+
+    color: #ffffff;
+    opacity: .64;
+}
+
+#flight-info .flight-date,
+#flight-info .destination div:nth-child(3),
+#passenger-info div:nth-child(2) {
+    text-align: right;
+}
+
+h1,
+.warning,
+#additional-info,
+#boarding-info .qr-code p  {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+    color: var(--title-color);
+}
+
+.info {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 19px;
+    color: var(--info-color);
+}
+
+.airport-name {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 47px;
+    color: var(--info-color);
+}
+
+.time {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 19px;
+    color: var(--flight-time-color);
+}
+
+.boarding-time {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 19px;
+    
+    margin-top: 2px;
+    padding: 4px 8px;
+    color: #ffffff;
+    border-radius: 8px;
+    background: var(--bg-boarding-time-color);
+}
+
+@media (max-width: 768px) {
+    #ticket {
+        background: none;
+        padding: 0;
+    }
+
+    #flight-info,
+    #passenger-info,
+    #boarding-info {
+        background: #ffffff;
+        border-radius: 24px;
+    }
+
+    #flight-info {
+        padding-top: 24px;
+    }
+
+    #passenger-info {
+        width: 100%;
+        margin-inline: 0;
+    }
+
+    #passenger-info .container {
+        padding-inline: 32px;
+    }
+
+    #boarding-info {
+        padding-bottom: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    #app {
+        padding-inline: 2rem;
+    }
+
+    #flight-info,
+    #boarding-info {
+        padding-inline: 24px;
+    }
+
+    #passenger-info .container{
+        padding-inline: 24px;
+    }
+}
